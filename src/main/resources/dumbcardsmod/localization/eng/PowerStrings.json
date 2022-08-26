@@ -1,0 +1,22 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:PanikPower": {
+    "NAME": "Panic Power",
+    "DESCRIPTIONS": [
+      "At the end of the turn add #b",
+      "Panic Buttons to your draw pile."
+    ]
+  },
+  "${modID}:FireBreathingOldPower": {
+    "NAME": "Fire Breathing",
+    "DESCRIPTIONS": [
+      "At the end of the turn deal #b",
+      "damage to ALL enemies for each attack played this turn."
+    ]
+  }
+}

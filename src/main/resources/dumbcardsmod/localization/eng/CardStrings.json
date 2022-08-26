@@ -1,0 +1,52 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "Name",
+    "DESCRIPTION": "Description.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },"${modID}:ForgetfulStrike": {
+  "NAME": "Forgetful Strike",
+  "DESCRIPTION": "Deal !D! damage. NL Exhaust a random card in your deck."
+}, "${modID}:Nothing": {
+  "NAME": "Sorry Nothing",
+  "DESCRIPTION": "Deal !D! damage.",
+  "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw a card."
+}, "${modID}:TurtleBlock": {
+  "NAME": "Turtle Shell",
+  "DESCRIPTION": "Gain !B! Block. Slowly."
+}, "${modID}:Normalcy": {
+  "NAME": "Normalmancy",
+  "DESCRIPTION": "Draw !M! cards. NL Add a Normality to your hand."
+}, "${modID}:Panik": {
+  "NAME": "Panik",
+  "DESCRIPTION": "At the end of the turn, add !M! Panic Buttons to your draw pile."
+}, "${modID}:ThisIsFine": {
+  "NAME": "This is Fine",
+  "DESCRIPTION": "Gain !M! Block for each Burn in your deck. ( !B! Block.) NL Draw a card for each Burn in your hand."
+}, "${modID}:RushedStrike": {
+  "NAME": "Rushed Strike",
+  "DESCRIPTION": "Deal !D! damage. NL Only playable in the first !M! seconds of combat.",
+  "EXTENDED_DESCRIPTION":[
+    "Deal !D! damage. NL Only playable in the first !M! seconds of combat. NL ( ",
+    " seconds left! )"
+  ]
+}, "${modID}:GremlinWheel": {
+  "NAME": "Spin the Wheel!!!",
+  "DESCRIPTION": "Spin the Gremlin Wheel. NL Exhaust."
+}, "${modID}:FireBreathingOld": {
+  "NAME": "Fire Breathing",
+  "DESCRIPTION": "At the end of the turn, deal 1 damage to ALL enemies for each Attack played this turn."
+}, "${modID}:BladeDanceOld": {
+  "NAME": "Blade Dance",
+  "DESCRIPTION": "Add !M! Shivs into your hand."
+}, "${modID}:MisplacedAccuracy": {
+  "NAME": "Accuracy",
+  "DESCRIPTION": "Shivs deal !M! additional damage."
+}, "${modID}:BestOffense": {
+  "NAME": "The Best Offense",
+  "DESCRIPTION": "If the enemy doesn't intend to attack, gain !B! Block."
+}
+}
