@@ -43,6 +43,7 @@ public class ChaosEmperorDragon extends BannableCard {
         setBackgroundTexture(characterPath("yataBack.png"),characterPath("yataBack2.png"));
         banned = true;
         exhaust = true;
+        this.isMultiDamage = true;
     }
 
     @Override

@@ -42,7 +42,7 @@ public class EmperorDragonAction extends AbstractGameAction {
         AbstractDungeon.effectsQueue.add(new BorderLongFlashEffect(new Color(1.0F, 0.4F, 0.0F, 0.9F)));
         int i;
         for(i = 0; i < count; ++i) {
-            this.addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, info.base, info.type, AttackEffect.FIRE));
+            this.addToBot(new DamageAllEnemiesAction(AbstractDungeon.player,info.base, info.type, AttackEffect.FIRE));
             AbstractMonster rand = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true);
             this.addToBot(new VFXAction(new LightningEffect(rand.hb.cX, rand.hb.cY)));
         }

@@ -24,5 +24,12 @@
     "DESCRIPTIONS": [
       "All Banned and Limited cards can be played."
     ]
+  },
+  "${modID}:SpeakersPower": {
+    "NAME": "Play it Loud",
+    "DESCRIPTIONS": [
+      "Lose #b",
+      "Strength if you turn down your Master Volume."
+    ]
   }
 }

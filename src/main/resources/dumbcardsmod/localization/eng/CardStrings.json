@@ -92,5 +92,14 @@
   "EXTENDED_DESCRIPTION": [
     "dumbcards:Banned. NL Lose 10 HP. NL Exhaust all cards in your hand. NL Deal !D! damage to all enemies for each Exhausted card. NL Exhaust."
   ]
+}, "${modID}:BlastIt": {
+  "NAME": "Sound System",
+  "DESCRIPTION": "Gain 0 - 4 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength.",
+  "UPGRADE_DESCRIPTION": "Gain 0 - 6 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength.",
+  "EXTENDED_DESCRIPTION": [
+    "Gain 0 - 4 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength. NL ( +",
+    "Gain 0 - 6 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength. NL ( +",
+    "  Strength. )"
+  ]
 }
 }
