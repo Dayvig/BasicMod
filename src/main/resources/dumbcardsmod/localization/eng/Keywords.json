@@ -19,5 +19,21 @@
       "multiword_keywords"
     ],
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest should use _ to replace spaces. In card text, you'll use the underscore versions."
+  },
+  {
+    "PROPER_NAME": "Banned",
+    "NAMES": [
+      "Banned",
+      "banned"
+    ],
+    "DESCRIPTION": "Cannot be played."
+  },
+  {
+    "PROPER_NAME": "Limited",
+    "NAMES": [
+      "Limited",
+      "limited"
+    ],
+    "DESCRIPTION": "You may only use one Limited card each combat. When you play a Limited card all other Limited cards become Banned. (Cannot be played.)"
   }
 ]

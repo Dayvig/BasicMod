@@ -18,5 +18,11 @@
       "At the end of the turn deal #b",
       "damage to ALL enemies for each attack played this turn."
     ]
+  },
+  "${modID}:UnlimitedPower": {
+    "NAME": "Unlimited Power",
+    "DESCRIPTIONS": [
+      "All Banned and Limited cards can be played."
+    ]
   }
 }

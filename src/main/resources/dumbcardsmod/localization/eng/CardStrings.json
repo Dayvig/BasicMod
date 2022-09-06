@@ -48,5 +48,49 @@
 }, "${modID}:BestOffense": {
   "NAME": "The Best Offense",
   "DESCRIPTION": "If the enemy doesn't intend to attack, gain !B! Block."
+}, "${modID}:Regretful": {
+  "NAME": "Dark Bargain",
+  "DESCRIPTION": "Deal !D! damage. NL At some point, wish you had never played this card."
+}, "${modID}:Splash": {
+  "NAME": "Splash",
+  "DESCRIPTION": "Do nothing. NL Can be upgraded any number of times."
+}, "${modID}:BlackLotus": {
+  "NAME": "Black Lotus",
+  "DESCRIPTION": "dumbcards:Banned. NL Gain [E] [E] [E]. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "dumbcards:Limited. NL Gain [E] [E] [E]. NL Exhaust.",
+  "EXTENDED_DESCRIPTION": [
+    "dumbcards:Banned. NL Gain [E] [E] [E]. NL Exhaust."
+  ]
+}, "${modID}:YataGarasu": {
+  "NAME": "Yata-Garasu",
+  "DESCRIPTION": "dumbcards:Banned. NL Deal !D! damage. If the enemy took unblocked damage, Stun it. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "dumbcards:Banned. NL Deal !D! damage. If the enemy took unblocked damage, Stun it."
+}, "${modID}:UnlimitedForm": {
+  "NAME": "Unlimited Form(at)",
+  "DESCRIPTION": "Ethereal. NL All dumbcards:Banned and dumbcards:Limited cards can be played.",
+  "UPGRADE_DESCRIPTION": "All dumbcards:Banned and dumbcards:Limited cards can be played."
+}, "${modID}:OneWithNothing": {
+  "NAME": "One With Nothing",
+  "DESCRIPTION": "Discard your hand.",
+  "UPGRADE_DESCRIPTION": "Exhaust your hand."
+}, "${modID}:PotOfGreed": {
+  "NAME": "Pot of Greed",
+  "DESCRIPTION": "dumbcards:Banned. NL Draw 2 cards.",
+  "UPGRADE_DESCRIPTION": "dumbcards:Limited. NL Exhaust the top 10 cards of your Draw Pile. NL Draw 2 cards.",
+  "EXTENDED_DESCRIPTION": [
+    "dumbcards:Banned. NL Exhaust the top 10 cards of your Draw Pile. NL Draw 2 cards.",
+    "Pot of Desires"
+  ]
+}, "${modID}:GrandestFinale": {
+  "NAME": "Grandest Finale",
+  "DESCRIPTION": "Can only be played if there are no cards in your draw pile, discard pile, or other cards in your hand. NL Deal !D! damage to ALL enemies.",
+  "UPGRADE_DESCRIPTION": "Can only be played if there are no cards in your draw pile, discard pile, or other cards in your hand."
+}, "${modID}:ChaosEmperorDragon": {
+  "NAME": "Chaos Emperor Dragon",
+  "DESCRIPTION": "dumbcards:Banned. NL Lose 10 HP. NL Exhaust all cards in your hand. NL Deal !D! damage to all enemies for each Exhausted card. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "dumbcards:Limited. NL Lose 10 HP. NL Exhaust all cards in your hand. NL Deal !D! damage to all enemies for each Exhausted card. NL Exhaust.",
+  "EXTENDED_DESCRIPTION": [
+    "dumbcards:Banned. NL Lose 10 HP. NL Exhaust all cards in your hand. NL Deal !D! damage to all enemies for each Exhausted card. NL Exhaust."
+  ]
 }
 }

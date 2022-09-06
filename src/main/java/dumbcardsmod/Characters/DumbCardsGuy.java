@@ -9,6 +9,9 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
+import com.megacrit.cardcrawl.actions.utility.ShowCardAndPoofAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
 import com.megacrit.cardcrawl.cards.colorless.Discovery;
@@ -17,16 +20,26 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
 import com.megacrit.cardcrawl.relics.BurningBlood;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
+import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 import dumbcardsmod.cards.ForgetfulStrike;
+import dumbcardsmod.cards.Regretful;
+import static java.lang.Math.min;
 
 import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import static dumbcardsmod.DumbCardsMod.characterPath;
 import static dumbcardsmod.DumbCardsMod.makeID;
@@ -50,7 +63,12 @@ public class DumbCardsGuy extends CustomPlayer {
     private static final String SHOULDER_2 = characterPath("shoulder2.png");
     private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
 
+    //dumb stuff
     public static float combatClock;
+    public static int regretCounter = 0;
+    public static float regretChance = 2f;
+    private static final float FINAL_XOFFSET = 150F;
+    private static final float FINAL_YOFFSET = 10F;
 
     public static class Enums {
         //These are used to identify your character, as well as your character's card color.
@@ -210,7 +228,31 @@ public class DumbCardsGuy extends CustomPlayer {
     @Override
     public void applyPreCombatLogic(){
         combatClock = 0f;
+        if (regretCounter > 0) {
+            float rand = AbstractDungeon.cardRng.random(0, 100);
+            if (rand <= regretChance) {
+                spawnNob();
+            } else {
+                regretChance += 1f;
+            }
+        }
     }
+
+    public void spawnNob(){
+        float offsetX = 0;
+        float offsetY = 0;
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShowCardBrieflyEffect(new Regretful())));
+        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(new Color(1.0F, 1.0F, 1.0F, 0.8F)));
+        AbstractDungeon.effectsQueue.add(new BorderLongFlashEffect(new Color(1.0F, 0.4F, 0.0F, 0.9F)));
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            offsetX = min(((m.drawX - ((float) Settings.WIDTH * 0.75F)) / Settings.scale), offsetX);
+            offsetY = min(m.drawY, offsetY);
+        }
+        AbstractDungeon.actionManager.addToTop(new SpawnMonsterAction(new GremlinNob(offsetX - (FINAL_XOFFSET * Settings.scale), offsetY - (FINAL_YOFFSET * Settings.scale)), false));
+        regretCounter--;
+        regretChance = 2f;
+    }
+
 
     @Override
     public void update(){

@@ -172,6 +172,9 @@ public class DumbCardsMod implements
     public static String characterPath(String file) {
         return resourcesFolder + "/character/" + file;
     }
+    public static String cardPath(String file){
+        return resourcesFolder + "/cards/" + file;
+    }
     public static String powerPath(String file) {
         return resourcesFolder + "/powers/" + file;
     }
