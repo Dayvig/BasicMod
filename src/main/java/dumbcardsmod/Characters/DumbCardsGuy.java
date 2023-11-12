@@ -11,7 +11,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
-import com.megacrit.cardcrawl.actions.utility.ShowCardAndPoofAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
 import com.megacrit.cardcrawl.cards.colorless.Discovery;
@@ -32,14 +31,13 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 import dumbcardsmod.cards.ForgetfulStrike;
 import dumbcardsmod.cards.Regretful;
+import dumbcardsmod.relics.ParadoxRelic;
+
 import static java.lang.Math.min;
 
-import java.sql.Time;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import static dumbcardsmod.DumbCardsMod.characterPath;
 import static dumbcardsmod.DumbCardsMod.makeID;
@@ -76,7 +74,7 @@ public class DumbCardsGuy extends CustomPlayer {
         @SpireEnum
         public static AbstractPlayer.PlayerClass DUMBGUY;
         @SpireEnum(name = "DUMB_COLOR") // These two MUST match. Change it to something unique for your character.
-        public static AbstractCard.CardColor CARD_COLOR;
+        public static AbstractCard.CardColor DUMB_COLOR;
         @SpireEnum(name = "DUMB_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
@@ -119,6 +117,7 @@ public class DumbCardsGuy extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         //IDs of starting relics. You can have multiple, but one is recommended.
         retVal.add(BurningBlood.ID);
+        retVal.add(ParadoxRelic.ID);
 
         return retVal;
     }
@@ -216,7 +215,7 @@ public class DumbCardsGuy extends CustomPlayer {
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return Enums.CARD_COLOR;
+        return Enums.DUMB_COLOR;
     }
 
     @Override

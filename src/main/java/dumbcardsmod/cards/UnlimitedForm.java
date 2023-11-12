@@ -1,16 +1,10 @@
 package dumbcardsmod.cards;
 
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import dumbcardsmod.Characters.DumbCardsGuy;
-import dumbcardsmod.actions.SpinWheelAction;
-import dumbcardsmod.effects.WheelEffect;
 import dumbcardsmod.powers.UnlimitedPower;
 import dumbcardsmod.util.CardInfo;
 
@@ -24,7 +18,7 @@ public class UnlimitedForm extends BaseCard {
             CardType.POWER, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardTarget.SELF, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             CardRarity.RARE, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
-            DumbCardsGuy.Enums.CARD_COLOR //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
+            DumbCardsGuy.Enums.DUMB_COLOR //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
     );
 
     public static final String ID = makeID(cardInfo.baseId);

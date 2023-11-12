@@ -31,5 +31,39 @@
       "Lose #b",
       "Strength if you turn down your Master Volume."
     ]
+  },
+  "${modID}:CheaterPower": {
+    "NAME": "Cheater",
+    "DESCRIPTIONS": [
+      "The next #b",
+      "cards you play this turn are ALWAYS playable."
+    ]
+  },
+  "${modID}:LifeSupportPower": {
+    "NAME": "Life Support Power",
+    "DESCRIPTIONS": [
+      "For the next #b",
+      "turns, any damage that would kill you reduces you to 1 hp instead."
+    ]
+  },
+  "${modID}:D12Power": {
+    "NAME": "D12Power",
+    "DESCRIPTIONS": [
+      "If your HP is full, gain #b",
+      " [E] at the start of each turn "
+    ]
+  },
+  "${modID}:HeadEmptyPower": {
+    "NAME": "Head Empty Power",
+    "DESCRIPTIONS": [
+      "If you have no cards in your hand, gain #b",
+      " Block at the end of the turn."
+    ]
+  },
+  "${modID}:BalanceModPower": {
+    "NAME": "Balance",
+    "DESCRIPTIONS": [
+      "Your cards R E T A I N."
+    ]
   }
 }

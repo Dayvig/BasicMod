@@ -4,14 +4,13 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.utils.compression.lzma.Base;
-import com.megacrit.cardcrawl.cards.green.Accuracy;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import dumbcardsmod.Characters.DumbCardsGuy;
 import dumbcardsmod.cards.BaseCard;
 import dumbcardsmod.cards.BladeDanceOld;
 import dumbcardsmod.cards.FireBreathingOld;
 import dumbcardsmod.cards.MisplacedAccuracy;
+import dumbcardsmod.relics.ParadoxRelic;
 import dumbcardsmod.util.GeneralUtils;
 import dumbcardsmod.util.KeywordInfo;
 import dumbcardsmod.util.TextureLoader;
@@ -40,7 +39,10 @@ public class DumbCardsMod implements
         EditKeywordsSubscriber,
         PostInitializeSubscriber,
         EditCharactersSubscriber,
-        EditCardsSubscriber  {
+        EditCardsSubscriber,
+        EditRelicsSubscriber,
+        AddAudioSubscriber
+{
     public static ModInfo info;
     public static String modID;
     static { loadModInfo(); }
@@ -70,7 +72,7 @@ public class DumbCardsMod implements
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
     public static void initialize() {
         new DumbCardsMod();
-        BaseMod.addColor(DumbCardsGuy.Enums.CARD_COLOR, cardColor, BG_ATTACK, BG_SKILL, BG_POWER, ENERGY_ORB, BG_ATTACK_P, BG_SKILL_P, BG_POWER_P, ENERGY_ORB_P, SMALL_ORB);
+        BaseMod.addColor(DumbCardsGuy.Enums.DUMB_COLOR, cardColor, BG_ATTACK, BG_SKILL, BG_POWER, ENERGY_ORB, BG_ATTACK_P, BG_SKILL_P, BG_POWER_P, ENERGY_ORB_P, SMALL_ORB);
     }
 
     public DumbCardsMod() {
@@ -217,5 +219,20 @@ public class DumbCardsMod implements
         UnlockTracker.unlockCard(MisplacedAccuracy.ID);
         UnlockTracker.unlockCard(BladeDanceOld.ID);
 
+    }
+
+    @Override
+    public void receiveEditRelics(){
+        logger.info("Adding relics");
+
+        // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
+        BaseMod.addRelicToCustomPool(new ParadoxRelic(), DumbCardsGuy.Enums.DUMB_COLOR);
+
+        logger.info("Done adding relics!");
+    }
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio("PIZZA", "dumbcardsmod/audio/Pizza.ogg");
     }
 }

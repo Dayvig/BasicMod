@@ -7,99 +7,339 @@
       "If you need to use it for stuff.",
       "Blizzard is a good example for this."
     ]
-  },"${modID}:ForgetfulStrike": {
-  "NAME": "Forgetful Strike",
-  "DESCRIPTION": "Deal !D! damage. NL Exhaust a random card in your deck."
-}, "${modID}:Nothing": {
-  "NAME": "Sorry Nothing",
-  "DESCRIPTION": "Deal !D! damage.",
-  "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw a card."
-}, "${modID}:TurtleBlock": {
-  "NAME": "Turtle Shell",
-  "DESCRIPTION": "Gain !B! Block. Slowly."
-}, "${modID}:Normalcy": {
-  "NAME": "Normalmancy",
-  "DESCRIPTION": "Draw !M! cards. NL Add a Normality to your hand."
-}, "${modID}:Panik": {
-  "NAME": "Panik",
-  "DESCRIPTION": "At the end of the turn, add !M! Panic Buttons to your draw pile."
-}, "${modID}:ThisIsFine": {
-  "NAME": "This is Fine",
-  "DESCRIPTION": "Gain !M! Block for each Burn in your deck. ( !B! Block.) NL Draw a card for each Burn in your hand."
-}, "${modID}:RushedStrike": {
-  "NAME": "Rushed Strike",
-  "DESCRIPTION": "Deal !D! damage. NL Only playable in the first !M! seconds of combat.",
-  "EXTENDED_DESCRIPTION":[
-    "Deal !D! damage. NL Only playable in the first !M! seconds of combat. NL ( ",
-    " seconds left! )"
-  ]
-}, "${modID}:GremlinWheel": {
-  "NAME": "Spin the Wheel!!!",
-  "DESCRIPTION": "Spin the Gremlin Wheel. NL Exhaust."
-}, "${modID}:FireBreathingOld": {
-  "NAME": "Fire Breathing",
-  "DESCRIPTION": "At the end of the turn, deal 1 damage to ALL enemies for each Attack played this turn."
-}, "${modID}:BladeDanceOld": {
-  "NAME": "Blade Dance",
-  "DESCRIPTION": "Add !M! Shivs into your hand."
-}, "${modID}:MisplacedAccuracy": {
-  "NAME": "Accuracy",
-  "DESCRIPTION": "Shivs deal !M! additional damage."
-}, "${modID}:BestOffense": {
-  "NAME": "The Best Offense",
-  "DESCRIPTION": "If the enemy doesn't intend to attack, gain !B! Block."
-}, "${modID}:Regretful": {
-  "NAME": "Dark Bargain",
-  "DESCRIPTION": "Deal !D! damage. NL At some point, wish you had never played this card."
-}, "${modID}:Splash": {
-  "NAME": "Splash",
-  "DESCRIPTION": "Do nothing. NL Can be upgraded any number of times."
-}, "${modID}:BlackLotus": {
-  "NAME": "Black Lotus",
-  "DESCRIPTION": "dumbcards:Banned. NL Gain [E] [E] [E]. NL Exhaust.",
-  "UPGRADE_DESCRIPTION": "dumbcards:Limited. NL Gain [E] [E] [E]. NL Exhaust.",
-  "EXTENDED_DESCRIPTION": [
-    "dumbcards:Banned. NL Gain [E] [E] [E]. NL Exhaust."
-  ]
-}, "${modID}:YataGarasu": {
-  "NAME": "Yata-Garasu",
-  "DESCRIPTION": "dumbcards:Banned. NL Deal !D! damage. If the enemy took unblocked damage, Stun it. NL Exhaust.",
-  "UPGRADE_DESCRIPTION": "dumbcards:Banned. NL Deal !D! damage. If the enemy took unblocked damage, Stun it."
-}, "${modID}:UnlimitedForm": {
-  "NAME": "Unlimited Form(at)",
-  "DESCRIPTION": "Ethereal. NL All dumbcards:Banned and dumbcards:Limited cards can be played.",
-  "UPGRADE_DESCRIPTION": "All dumbcards:Banned and dumbcards:Limited cards can be played."
-}, "${modID}:OneWithNothing": {
-  "NAME": "One With Nothing",
-  "DESCRIPTION": "Discard your hand.",
-  "UPGRADE_DESCRIPTION": "Exhaust your hand."
-}, "${modID}:PotOfGreed": {
-  "NAME": "Pot of Greed",
-  "DESCRIPTION": "dumbcards:Banned. NL Draw 2 cards.",
-  "UPGRADE_DESCRIPTION": "dumbcards:Limited. NL Exhaust the top 10 cards of your Draw Pile. NL Draw 2 cards.",
-  "EXTENDED_DESCRIPTION": [
-    "dumbcards:Banned. NL Exhaust the top 10 cards of your Draw Pile. NL Draw 2 cards.",
-    "Pot of Desires"
-  ]
-}, "${modID}:GrandestFinale": {
-  "NAME": "Grandest Finale",
-  "DESCRIPTION": "Can only be played if there are no cards in your draw pile, discard pile, or other cards in your hand. NL Deal !D! damage to ALL enemies.",
-  "UPGRADE_DESCRIPTION": "Can only be played if there are no cards in your draw pile, discard pile, or other cards in your hand."
-}, "${modID}:ChaosEmperorDragon": {
-  "NAME": "Chaos Emperor Dragon",
-  "DESCRIPTION": "dumbcards:Banned. NL Lose 10 HP. NL Exhaust all cards in your hand. NL Deal !D! damage to all enemies for each Exhausted card. NL Exhaust.",
-  "UPGRADE_DESCRIPTION": "dumbcards:Limited. NL Lose 10 HP. NL Exhaust all cards in your hand. NL Deal !D! damage to all enemies for each Exhausted card. NL Exhaust.",
-  "EXTENDED_DESCRIPTION": [
-    "dumbcards:Banned. NL Lose 10 HP. NL Exhaust all cards in your hand. NL Deal !D! damage to all enemies for each Exhausted card. NL Exhaust."
-  ]
-}, "${modID}:BlastIt": {
-  "NAME": "Sound System",
-  "DESCRIPTION": "Gain 0 - 4 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength.",
-  "UPGRADE_DESCRIPTION": "Gain 0 - 6 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength.",
-  "EXTENDED_DESCRIPTION": [
-    "Gain 0 - 4 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength. NL ( +",
-    "Gain 0 - 6 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength. NL ( +",
-    "  Strength. )"
-  ]
-}
+  },
+  "${modID}:ForgetfulStrike": {
+    "NAME": "Forgetful Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a random card in your deck."
+  },
+  "${modID}:Nothing": {
+    "NAME": "Sorry Nothing",
+    "DESCRIPTION": "Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw a card."
+  },
+  "${modID}:TurtleBlock": {
+    "NAME": "Turtle Shell",
+    "DESCRIPTION": "Gain !B! Block. Slowly."
+  },
+  "${modID}:Normalcy": {
+    "NAME": "Normalmancy",
+    "DESCRIPTION": "Draw !M! cards. NL Add a Normality to your hand."
+  },
+  "${modID}:Panik": {
+    "NAME": "Panik",
+    "DESCRIPTION": "At the end of the turn, add !M! Panic Buttons to your draw pile."
+  },
+  "${modID}:ThisIsFine": {
+    "NAME": "This is Fine",
+    "DESCRIPTION": "Gain !M! Block for each Burn in your deck. ( !B! Block.) NL Draw a card for each Burn in your hand."
+  },
+  "${modID}:RushedStrike": {
+    "NAME": "Rushed Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Only playable in the first !M! seconds of combat.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage. NL Only playable in the first !M! seconds of combat. NL ( ",
+      " seconds left! )"
+    ]
+  },
+  "${modID}:GremlinWheel": {
+    "NAME": "Spin the Wheel!!!",
+    "DESCRIPTION": "Spin the Gremlin Wheel. NL Exhaust."
+  },
+  "${modID}:FireBreathingOld": {
+    "NAME": "Fire Breathing",
+    "DESCRIPTION": "At the end of the turn, deal 1 damage to ALL enemies for each Attack played this turn."
+  },
+  "${modID}:BladeDanceOld": {
+    "NAME": "Blade Dance",
+    "DESCRIPTION": "Add !M! Shivs into your hand."
+  },
+  "${modID}:MisplacedAccuracy": {
+    "NAME": "Accuracy",
+    "DESCRIPTION": "Shivs deal !M! additional damage."
+  },
+  "${modID}:BestOffense": {
+    "NAME": "The Best Offense",
+    "DESCRIPTION": "If the enemy doesn't intend to attack, gain !B! Block."
+  },
+  "${modID}:Regretful": {
+    "NAME": "Dark Bargain",
+    "DESCRIPTION": "Deal !D! damage. NL At some point, wish you had never played this card."
+  },
+  "${modID}:Splash": {
+    "NAME": "Splash",
+    "DESCRIPTION": "Do nothing. NL Can be upgraded any number of times."
+  },
+  "${modID}:BlackLotus": {
+    "NAME": "Black Lotus",
+    "DESCRIPTION": "dumbcards:Banned. NL Gain [E] [E] [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "dumbcards:Limited. NL Gain [E] [E] [E]. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "dumbcards:Banned. NL Gain [E] [E] [E]. NL Exhaust."
+    ]
+  },
+  "${modID}:YataGarasu": {
+    "NAME": "Yata-Garasu",
+    "DESCRIPTION": "dumbcards:Banned. NL Deal !D! damage. If the enemy took unblocked damage, Stun it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "dumbcards:Banned. NL Deal !D! damage. If the enemy took unblocked damage, Stun it."
+  },
+  "${modID}:UnlimitedForm": {
+    "NAME": "Unlimited Form(at)",
+    "DESCRIPTION": "Ethereal. NL All dumbcards:Banned, dumbcards:Limited and Unplayable cards can be played.",
+    "UPGRADE_DESCRIPTION": "All dumbcards:Banned, dumbcards:Limited and Unplayable cards can be played."
+  },
+  "${modID}:OneWithNothing": {
+    "NAME": "One With Nothing",
+    "DESCRIPTION": "Discard your hand.",
+    "UPGRADE_DESCRIPTION": "Exhaust your hand."
+  },
+  "${modID}:PotOfGreed": {
+    "NAME": "Pot of Greed",
+    "DESCRIPTION": "dumbcards:Banned. NL Draw 2 cards.",
+    "UPGRADE_DESCRIPTION": "dumbcards:Limited. NL Exhaust the top 10 cards of your Draw Pile. NL Draw 2 cards.",
+    "EXTENDED_DESCRIPTION": [
+      "dumbcards:Banned. NL Exhaust the top 10 cards of your Draw Pile. NL Draw 2 cards.",
+      "Pot of Desires"
+    ]
+  },
+  "${modID}:GrandestFinale": {
+    "NAME": "Grandest Finale",
+    "DESCRIPTION": "Can only be played if there are no cards in your draw pile, discard pile, or other cards in your hand. NL Deal !D! damage to ALL enemies."
+  },
+  "${modID}:ChaosEmperorDragon": {
+    "NAME": "Chaos Emperor Dragon",
+    "DESCRIPTION": "dumbcards:Banned. NL Lose 10 HP. NL Exhaust all cards in your hand. NL Deal !D! damage to all enemies for each Exhausted card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "dumbcards:Limited. NL Lose 10 HP. NL Exhaust all cards in your hand. NL Deal !D! damage to all enemies for each Exhausted card. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "dumbcards:Banned. NL Lose 10 HP. NL Exhaust all cards in your hand. NL Deal !D! damage to all enemies for each Exhausted card. NL Exhaust."
+    ]
+  },
+  "${modID}:BlastIt": {
+    "NAME": "Sound System",
+    "DESCRIPTION": "Gain 0 - 3 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength.",
+    "UPGRADE_DESCRIPTION": "Gain 0 - 5 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "Gain 0 - 3 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength. NL ( +",
+      "Gain 0 - 5 Strength, based on your Master Volume. If you turn down your Volume, lose this Strength. NL ( +",
+      "  Strength. )"
+    ]
+  },
+  "${modID}:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:StrikeD": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${modID}:DefendD": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "${modID}:LookAtThisNet": {
+    "NAME": "Look at this Net",
+    "DESCRIPTION": "Gain !M! Strength this turn only. NL Gain dumbcards:Entangled."
+  },
+  "${modID}:Cheater": {
+    "NAME": "Cheater",
+    "DESCRIPTION": "Ethereal. NL Cheat out the next card you play this turn (Can be played, no matter what.) NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Cheat out the next card you play this turn (Can be played, no matter what.) NL Exhaust."
+  },
+  "${modID}:Imakuni": {
+    "NAME": "Imakuni",
+    "DESCRIPTION": "Become Confused."
+  },
+  "${modID}:Mulligan": {
+    "NAME": "Mulligan",
+    "DESCRIPTION": "Innate. NL If all other cards in your hand cannot be played, discard your hand and draw that many cards + 1. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL If all other cards in your hand cannot be played, discard your hand and draw that many cards + 1."
+  },
+  "${modID}:GoldenNeedle": {
+    "NAME": "Golden Needle",
+    "DESCRIPTION": "Deal !D! damage. If Fatal, gain !M! gold."
+  },
+  "${modID}:Thonk": {
+    "NAME": "Think",
+    "DESCRIPTION": "Draw a card. NL If you are Confused, gain !B! block and remove Confused."
+  },
+  "${modID}:Oven": {
+    "NAME": "Oven",
+    "DESCRIPTION": "Channel !M! Frost. NL Add !M! Burns to your hand. NL Become Confused."
+  },
+  "${modID}:Poison": {
+    "NAME": "Poison",
+    "DESCRIPTION": "Apply !M! Poison. NL dumbcards:Status_Effect",
+    "EXTENDED_DESCRIPTION": [
+      "IMMUNE",
+      "RESISTED"
+    ]
+  },
+  "${modID}:Death": {
+    "NAME": "Death",
+    "DESCRIPTION": "50% chance to kill an enemy. NL dumbcards:Status_Effect",
+    "EXTENDED_DESCRIPTION": [
+      "IMMUNE",
+      "RESISTED",
+      "FAILED"
+    ]
+  },
+  "${modID}:BIGStrike": {
+    "NAME": "BIG Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:Paralysis": {
+    "NAME": "Paralysis",
+    "DESCRIPTION": "Stun an enemy. NL Exhaust. NL dumbcards:Status_Effect",
+    "EXTENDED_DESCRIPTION": [
+      "IMMUNE",
+      "RESISTED"
+    ]
+  },
+  "${modID}:Stinger": {
+    "NAME": "Stinger",
+    "DESCRIPTION": "Deal !D! damage. NL Die."
+  },
+  "${modID}:LifeSupport": {
+    "NAME": "Life Support",
+    "DESCRIPTION": "You cannot die for the next !M! turns."
+  },
+  "${modID}:PlotArmor": {
+    "NAME": "Plot Armor",
+    "DESCRIPTION": "Gain !B! Block. NL Can only be played if you have 5 or less Health."
+  },
+  "${modID}:PlayTheUnplayable": {
+    "NAME": "Play The Unplayable",
+    "DESCRIPTION": "When you play an Unplayable card, gain !M! Strength."
+  },
+  "${modID}:KeywordSoup": {
+    "NAME": "Keyword Soup",
+    "DESCRIPTION": "Innate. Retain. Ethereal. NL Randomly add a Shiv, *Miracle, *Insight or *Smite to your hand. NL Channel and Evoke 1 Lightning. NL Enter Calm. NL Gain 3 Mantra. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. Retain. Ethereal. NL Randomly add a Shiv, *Miracle, *Insight or *Smite to your hand. NL Channel and Evoke 1 Lightning. NL Enter Calm. NL Gain 3 Mantra. NL Apply 1 Vulnerable and Weak to ALL enemies. NL Gain 1 Strength and Dexterity. NL Exhaust."
+  },
+  "${modID}:Angery": {
+    "NAME": "Angery",
+    "DESCRIPTION": "Enter Wrath."
+  },
+  "${modID}:RunAway": {
+    "NAME": "Run Away",
+    "DESCRIPTION": "Escape from a non-boss combat. Receive no rewards."
+  },
+  "${modID}:ForgottenD12": {
+    "NAME": "Forgotten D12",
+    "DESCRIPTION": "If your HP is full, gain [E] at the start of each turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL If your HP is full, gain [E] at the start of each turn. "
+  },
+  "${modID}:Tribbles": {
+    "NAME": "Tribbles",
+    "DESCRIPTION": "Gain !B! Block. NL Add 2 Tribbles to your draw pile."
+  },
+  "${modID}:NoThoughts": {
+    "NAME": "No Thoughts",
+    "DESCRIPTION": "At the end of the turn, gain !M! Block if you have no cards in your hand."
+  },
+  "${modID}:Stargaze": {
+    "NAME": "Stargaze",
+    "DESCRIPTION": "Draw X cards.",
+    "UPGRADE_DESCRIPTION": "Draw X+1 cards."
+  },"${modID}:SnakeEyes": {
+  "NAME": "Snake Eyes",
+  "DESCRIPTION": "Draw 2 cards. NL \"Randomize\" the cost of cards in your hand.",
+  "UPGRADE_DESCRIPTION": "Retain. NL Draw 2 cards. NL \"Randomize\" the cost of cards in your hand."
+},
+  "${modID}:Alpha": {
+    "NAME": "Alpha",
+    "DESCRIPTION": "Shuffle a *Beta into your Draw Pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Shuffle a #yBeta into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Beta2": {
+    "NAME": "Beta",
+    "DESCRIPTION": "Shuffle a *Gamma into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Gamma": {
+    "NAME": "Gamma",
+    "DESCRIPTION": "Shuffle a *Delta into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Delta": {
+    "NAME": "Delta",
+    "DESCRIPTION": "Shuffle an *Eplison into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Eplison": {
+    "NAME": "Eplison",
+    "DESCRIPTION": "Shuffle a *Zeta into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Zeta": {
+    "NAME": "Zeta",
+    "DESCRIPTION": "Shuffle a *Eta into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Eta": {
+    "NAME": "Eta",
+    "DESCRIPTION": "Shuffle a *Theta into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Theta": {
+    "NAME": "Theta",
+    "DESCRIPTION": "Shuffle an *Iota into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Iota": {
+    "NAME": "Iota",
+    "DESCRIPTION": "Shuffle a *Kappa into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Kappa": {
+    "NAME": "Kappa",
+    "DESCRIPTION": "Shuffle a *Lambda into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Lambda": {
+    "NAME": "Lambda",
+    "DESCRIPTION": "Shuffle a *Mu into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Mu": {
+    "NAME": "Mu",
+    "DESCRIPTION": "Shuffle a *Nu into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Nu": {
+    "NAME": "Nu",
+    "DESCRIPTION": "Shuffle an *Xl into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Xl": {
+    "NAME": "Xl",
+    "DESCRIPTION": "Shuffle an *Omikron into your Draw Pile. NL Exhaust."
+  },
+  "${modID}:Omikron": {
+    "NAME": "Omikron",
+    "DESCRIPTION": "Shuffle a *Pi into your Draw Pile. NL Exhaust."
+  },
+
+
+  "${modID}:PizzaTime": {
+    "NAME": "Pizza Time",
+    "DESCRIPTION": "Shuffle a *Pizza into your discard pile. You have 30 seconds to deliver it! NL Exhaust."
+  },
+  "${modID}:Pizza": {
+    "NAME": "Pizza",
+    "DESCRIPTION": "Heal 10 HP. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Heal 10 HP. NL Exhaust. NL Only playable if delievered within 30 seconds! NL ( ",
+      " seconds left! )"
+    ]
+  },
+  "${modID}:BalanceMod": {
+    "NAME": "Balance Mod",
+    "DESCRIPTION": "Your cards have Retain."
+  },
+  "${modID}:TheBox": {
+    "NAME": "The Box",
+    "DESCRIPTION": "What could it be?"
+  },
+  "${modID}:Equation": {
+    "NAME": "Equation",
+    "DESCRIPTION": "Deal X damage, where -10<=X<=30. Equation changes each turn.",
+    "EXTENDED_DESCRIPTION": [
+      "Solve for X, where ",
+      "<=X<=",
+      ": NL "
+    ]
+
+  }
 }

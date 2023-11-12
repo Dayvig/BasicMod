@@ -35,5 +35,21 @@
       "limited"
     ],
     "DESCRIPTION": "You may only use one Limited card each combat. When you play a Limited card all other Limited cards become Banned. (Cannot be played.)"
-  }
+  },
+  {
+    "PROPER_NAME": "Entangled",
+    "NAMES": [
+      "Entangled",
+      "entangled"
+    ],
+    "DESCRIPTION": "Cannot play attacks this turn."
+  },{
+  "PROPER_NAME": "Status Effect",
+  "NAMES": [
+    "Status Effect",
+    "status_effect",
+    "Status_Effect"
+  ],
+  "DESCRIPTION": "Bosses are Immune to status effects. Status effects have a 25% chance of working on elites."
+}
 ]

@@ -35,6 +35,12 @@ public class UnlimitedPower extends BasePower implements CloneablePowerInterface
     @Override
     public void onInitialApplication(){
         UnBanAll();
+        for (AbstractCard c : AbstractDungeon.player.hand.group){
+            if (c.cost == -2){
+                c.costForTurn = 0;
+                c.freeToPlayOnce = true;
+            }
+        }
     }
 
     void UnBanAll(){
@@ -54,6 +60,16 @@ public class UnlimitedPower extends BasePower implements CloneablePowerInterface
             if (c instanceof BannableCard){
                 ((BannableCard) c).UnBan();
                 ((BannableCard) c).UnLimit();
+            }
+        }
+    }
+
+    @Override
+    public void onDrawOrDiscard(){
+        for (AbstractCard c : AbstractDungeon.player.hand.group){
+            if (c.cost == -2){
+                c.costForTurn = 0;
+                c.freeToPlayOnce = true;
             }
         }
     }

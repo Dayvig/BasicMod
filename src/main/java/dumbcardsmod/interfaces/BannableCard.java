@@ -1,8 +1,10 @@
 package dumbcardsmod.interfaces;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import dumbcardsmod.cards.BaseCard;
+import dumbcardsmod.powers.CheaterPower;
 import dumbcardsmod.util.CardInfo;
 
 public class BannableCard extends BaseCard {
@@ -21,7 +23,13 @@ public class BannableCard extends BaseCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m){
-        super.canUse(p, m);
+        boolean canUse = super.canUse(p, m);
+        if (AbstractDungeon.player.hasPower(CheaterPower.POWER_ID)){
+            return true;
+        }
+        else if (!canUse){
+            return false;
+        }
         return !banned;
     }
 

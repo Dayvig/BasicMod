@@ -2,23 +2,15 @@ package dumbcardsmod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.FireBreathingPower;
 import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
 import dumbcardsmod.Characters.DumbCardsGuy;
-import dumbcardsmod.actions.ExhaustRandomAction;
-import dumbcardsmod.powers.FireBreathingOldPower;
+import dumbcardsmod.powers.CheaterPower;
 import dumbcardsmod.util.CardInfo;
 
 import static dumbcardsmod.DumbCardsMod.makeID;
@@ -31,13 +23,13 @@ public class GrandestFinale extends BaseCard {
             CardType.ATTACK, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardTarget.ALL_ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             CardRarity.RARE, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
-            DumbCardsGuy.Enums.CARD_COLOR  //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
+            DumbCardsGuy.Enums.DUMB_COLOR  //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or something similar for a basegame character color.
     );
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 500;
-    private static final int UPG_DAMAGE = 100;
+    private static final int DAMAGE = 100;
+    private static final int UPG_DAMAGE = 120;
 
     public GrandestFinale() {
         super(cardInfo); //Pass the cardInfo to the BaseCard constructor.
@@ -64,7 +56,10 @@ public class GrandestFinale extends BaseCard {
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
-        if (!canUse) {
+        if (AbstractDungeon.player.hasPower(CheaterPower.POWER_ID)){
+            return true;
+        }
+        else if (!canUse) {
             return false;
         } else if (p.drawPile.size() > 0 || p.discardPile.size() > 0 || p.hand.size() > 1) {
             this.cantUseMessage = cardStrings.UPGRADE_DESCRIPTION;

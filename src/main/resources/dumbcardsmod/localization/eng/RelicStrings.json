@@ -5,5 +5,13 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. [E] is an energy icon."
     ]
+  },
+  "${modID}:ParadoxRelic": {
+    "NAME": "Paradoxes",
+    "FLAVOR": "One should not play with time.",
+    "DESCRIPTIONS": [
+      "Number of Paradoxes: #b",
+      "Counts the number of paradoxes."
+    ]
   }
 }
